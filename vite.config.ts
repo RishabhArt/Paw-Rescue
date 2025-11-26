@@ -32,7 +32,7 @@ export default defineConfig(({ mode }) => {
       }
     },
     build: {
-      outDir: 'dist',
+      outDir: 'dist/client', // Updated to match server.ts expectations
       sourcemap: true,
       chunkSizeWarningLimit: 1000,
       rollupOptions: {
@@ -43,6 +43,8 @@ export default defineConfig(({ mode }) => {
           },
         },
       },
+      // Add emptyOutDir to ensure clean builds
+      emptyOutDir: true,
     },
     resolve: {
       alias: {
@@ -89,7 +91,6 @@ export default defineConfig(({ mode }) => {
           changeOrigin: true,
           secure: false,
         },
-
         // Clerk OAuth and API endpoints
         '/v1': {
           target: `https://${clerkFrontendApi}`,
@@ -123,7 +124,7 @@ export default defineConfig(({ mode }) => {
         origin: [
           'http://localhost:3000',
           'http://localhost:3001',
-          `https://${clerkFrontendApi}`
+          `https://${clerkFrontendApi}` 
         ],
         methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
         preflightContinue: false,

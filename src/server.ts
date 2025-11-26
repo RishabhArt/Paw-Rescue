@@ -3,18 +3,26 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import path from 'path';
-import apiRouter from './app/api';
-import reportsRouter from './app/api/reports'; // Import the reports router
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+// Get __dirname equivalent in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // Load environment variables from .env file
 dotenv.config();
+
+// Import API routes
+import apiRouter from './app/api';
+import reportsRouter from './app/api/reports';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173', // Default Vite dev server port
+  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
   credentials: true
 }));
 app.use(express.json());
@@ -27,15 +35,20 @@ app.get('/health', (req, res) => {
 
 // API routes
 app.use('/api', apiRouter);
-app.use('/api/reports', reportsRouter); // Add the reports routes
+app.use('/api/reports', reportsRouter);
 
 // Serve static files from the React app in production
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../dist')));
-  
-  // Handle React routing, return all requests to React app
+  // Path to the Vite build output
+  const clientDistPath = path.join(process.cwd(), 'dist', 'client');
+  const indexHtmlPath = path.join(clientDistPath, 'index.html');
+
+  // Serve static files
+  app.use(express.static(clientDistPath));
+
+  // Handle client-side routing, return all requests to React app
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../dist', 'index.html'));
+    res.sendFile(indexHtmlPath);
   });
 }
 
