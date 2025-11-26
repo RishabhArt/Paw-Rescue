@@ -51,7 +51,7 @@ npm install
 
 yarn install
 
-Set up environment variables
+# Set up environment variables
 
 cp .env.example .env
 
@@ -94,41 +94,42 @@ pawrescue/
 
 ├── src/
 
-│   ├── api/                 # API routes and controllers
+│   ├── api/                          # API routes and controllers
 
-│   ├── components/          # Reusable UI components
+│   ├── components/                   # Reusable UI components
 
-│   ├── config/              # Configuration files
+│   ├── config/                       # Configuration files
 
-│   ├── context/             # React context providers
+│   ├── context/                      # React context providers
 
-│   ├── db/                  # Database models and migrations
+│   ├── db/                           # Database models and migrations
 
-│   ├── hooks/               # Custom React hooks
+│   ├── hooks/                        # Custom React hooks
 
-│   ├── layouts/             # Page layout components
+│   ├── layouts/                      # Page layout components
 
-│   ├── pages/               # Application pages
+│   ├── pages/                        # Application pages
 
-│   ├── services/            # API service layer
+│   ├── services/                     # API service layer
 
-│   ├── styles/              # Global styles
+│   ├── styles/                       # Global styles
 
-│   ├── types/               # TypeScript type definitions
+│   ├── types/                        # TypeScript type definitions
 
-│   └── utils/               # Utility functions
+│   └── utils/                        # Utility functions
 
-├── public/                  # Static files
+├── public/                           # Static files
 
-└── tests/                   # Test files
+└── tests/                            # Test files
 
 
-🔧 Configuration
+# 🔧 Configuration
 
-Environment Variables
+Environment Variables:
+
 Create a .env file in the root directory with the following variables:
 
-env
+.env
 
 # Application
 NODE_ENV=development
@@ -178,83 +179,56 @@ GOOGLE_CLIENT_SECRET=your-google-client-secret
 
 
 📦 Scripts
-dev - Start development server
-
-build - Build for production
-
-start - Start production server
-
-test - Run tests
-
-lint - Run linter
-
-format - Format code with Prettier
-
-db:migrate - Run database migrations
-
-db:seed - Seed database with test data
+-dev - Start development server
+-build - Build for production
+-start - Start production server
+-test - Run tests
+-lint - Run linter
+-format - Format code with Prettier
+-db:migrate - Run database migrations
+-db:seed - Seed database with test data
 
 
 🛠️ Tech Stack
 
-Frontend
+Frontend:
 
-React 18
+-React 18
+-TypeScript
+-Vite
+-Tailwind CSS
+-React Query
+-React Hook Form
+-React Router
+-Framer Motion (animations)
+-React Icons
 
-TypeScript
+Backend:
 
-Vite
-
-Tailwind CSS
-
-React Query
-
-React Hook Form
-
-React Router
-
-Framer Motion (animations)
-
-React Icons
-
-Backend
-
-Node.js
-
-Express
-
-PostgreSQL
-
-Drizzle ORM
-
-JWT Authentication
-
-Zod (validation)
-
-DevOps
-
-GitHub Actions (CI/CD)
-
-Docker
-
-PostgreSQL
-
-AWS S3 (file storage)
-
-Vercel (deployment)
+-Node.js
+-Express
+-PostgreSQL
+-Drizzle ORM
+-JWT Authentication
+-Zod (validation)
+-DevOps
+-GitHub Actions (CI/CD)
+-Docker
+-AWS S3 (file storage)
+-Vercel (deployment)
 
 
-📝 API Documentation
+# 📝 API Documentation
 
 API documentation is available at /api-docs when running the development server.
 
 
-🤝 Contributing
+# 🤝 Contributing
 
 We welcome contributions! Please read our Contributing Guide to get started.
 
 
-Fork the repository
+# Fork the repository
 
 Create a feature branch (git checkout -b feature/amazing-feature)
 
@@ -265,12 +239,12 @@ Push to the branch (git push origin feature/amazing-feature)
 Open a Pull Request
 
 
-📄 License
+# 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 
-🙏 Acknowledgments
+# 🙏 Acknowledgments
 
 Drizzle ORM - For the awesome TypeScript ORM
 
@@ -279,11 +253,11 @@ Tailwind CSS - For the utility-first CSS framework
 React Icons - For the beautiful icons
 
 
-📞 Contact
+# 📞 Contact
 
 For any questions or feedback, please reach out to:
 
 
-Rishabh Shan - rishabhshan7@example.com
+# Rishabh Shan - rishabhshan7@example.com
 
-Project Link: https://github.com/RishabhArt/PawRescue-Application
+# Project Link: https://github.com/RishabhArt/PawRescue-Application
