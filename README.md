@@ -43,11 +43,11 @@ PawRescue is a comprehensive platform connecting animal lovers with rescue organ
    git clone [https://github.com/yourusername/pawrescue.git](https://github.com/yourusername/pawrescue.git)
    cd pawrescue
 
-# Install dependencies
+## Install dependencies
 
 npm install
 
-## or
+### or
 
 yarn install
 
@@ -56,39 +56,39 @@ yarn install
 cp .env.example .env
 
 
-# Update the .env file with your configuration
+## Update the .env file with your configuration
 
 Set up database
 
-# Run database migrations
+## Run database migrations
 
 npm run db:migrate
 
 
-# Seed initial data (optional)
+## Seed initial data (optional)
 
 npm run db:seed
 
 Start the development server
 
 
-# Start frontend and backend
+## Start frontend and backend
 
 npm run dev
 
 
-# Or start them separately
+### Or start them separately
 
 npm run dev:frontend
 
 npm run dev:backend
 
 
-# Open your browser
+## Open your browser
 
 http://localhost:3000
 
-# 🏗️ Project Structure
+## 🏗️ Project Structure
 
 pawrescue/
 
@@ -123,7 +123,7 @@ pawrescue/
 └── tests/                            # Test files
 
 
-# 🔧 Configuration
+## 🔧 Configuration
 
 Environment Variables:
 
@@ -131,24 +131,24 @@ Environment Variables:
 
 .env
 
-# Application
+## Application
 NODE_ENV=development
 
 PORT=3000
 
 API_URL=http://localhost:3001
 
-# Database
+## Database
 DATABASE_URL=postgresql://user:password@localhost:5432/pawrescue
 
 DATABASE_SSL=false
 
-# Authentication
+## Authentication
 JWT_SECRET=your_jwt_secret
 
 JWT_EXPIRES_IN=7d
 
-# Email (for notifications)
+## Email (for notifications)
 SMTP_HOST=smtp.example.com
 
 SMTP_PORT=587
@@ -160,7 +160,7 @@ SMTP_PASS=your-email-password
 SMTP_FROM=noreply@pawrescue.com
 
 
-# Storage (for pet images)
+## Storage (for pet images)
 STORAGE_PROVIDER=local # or 's3'
 
 AWS_ACCESS_KEY_ID=your-aws-key
@@ -172,13 +172,13 @@ AWS_REGION=us-east-1
 AWS_BUCKET_NAME=pawrescue-uploads
 
 
-# Google OAuth (optional)
+## Google OAuth (optional)
 GOOGLE_CLIENT_ID=your-google-client-id
 
 GOOGLE_CLIENT_SECRET=your-google-client-secret
 
 
-# 📦 Scripts
+## 📦 Scripts
 - dev - Start development server
 - build - Build for production
 - start - Start production server
@@ -189,9 +189,9 @@ GOOGLE_CLIENT_SECRET=your-google-client-secret
 - db:seed - Seed database with test data
 
 
-# 🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-## Frontend:
+### Frontend:
 
 - React 18
 - TypeScript
@@ -203,7 +203,7 @@ GOOGLE_CLIENT_SECRET=your-google-client-secret
 - Framer Motion (animations)
 - React Icons
 
-## Backend:
+### Backend:
 
 - Node.js
 - Express
@@ -253,11 +253,11 @@ Tailwind CSS - For the utility-first CSS framework
 React Icons - For the beautiful icons
 
 
-# 📞 Contact
+## 📞 Contact
 
 For any questions or feedback, please reach out to:
 
 
-# Rishabh Shan - rishabhshan7@example.com
+### Rishabh Shan - rishabhshan7@example.com
 
-# Project Link: https://github.com/RishabhArt/PawRescue-Application
+### Project Link: https://github.com/RishabhArt/PawRescue-Application
